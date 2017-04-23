@@ -25,7 +25,7 @@
     "clean-compiled": "rimraf **/*.js **/*.js.map **/*.d.ts",
     "clean-git": "git clean -X -d -f",
     "prepublishOnly": "npm run clean && npm install && npm test",
-    "postinstall": "npm run build-publish",
+    "install": "npm run build-publish",
     "postpublish": "node ./scripts/tag-release",
     "review": "npm run review-code & npm run review-tests",
     "review-code": "tslint \"./**/*.ts\" --exclude \"./**/*.d.ts\" --exclude \"./test/**/*.ts\" --exclude \"./node_modules/**/*.ts\"",
